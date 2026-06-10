@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vic Autos | Premium Upgrades & Genuine Tokunbo Parts</title>
+    <style>
+        /* Base & Design Tokens */
+        :root {
+            --primary: #ff2a2a;      /* Racing Crimson */
+            --primary-hover: #cc1f1f;
+            --bg-deep: #08080a;     /* Pure Dark Asphalt */
+            --bg-card: #121216;     /* Carbon Panel */
+            --bg-nav: rgba(13, 13, 17, 0.95);
+            --text-pure: #ffffff;
+            --text-muted: #9fa0a6;
+            --whatsapp: #25d366;
+            --tokunbo-blue: #0076ff;
+            --glow: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-pure);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- STICKY NAVIGATION BAR --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-nav);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1c1c24;
+            z-index: 1000;
+            animation: fadeInDown 0.8s var(--glow);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 1001;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-pure);
+        }
+
+        .nav-cta {
+            background-color: var(--primary);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Hamburger Menu Icon */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: var(--text-pure);
+            transition: all 0.3s ease;
+        }
+
+        /* --- HERO SECTION WITH CAR BACKGROUND --- */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: linear-gradient(
+                rgba(8, 8, 10, 0.85), 
+                rgba(8, 8, 10, 0.75)
+            ), 
+            url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            animation: fadeInUp 1s var(--glow) 0.2s both;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 42, 42, 0.1);
+            border: 1px solid rgba(255, 42, 42, 0.2);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+            display: block;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e1e1e6; 
+            margin-bottom: 40px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero-btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s var(--glow);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 20px rgba(255, 42, 42, 0.25);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 42, 42, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* --- THE DUAL MARKET SPLIT SECTION --- */
+        .markets {
+            padding: 120px 0;
+            background-color: #0b0b0f;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-header h2 {
+            font-size: 38px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 span {
+            color: var(--primary);
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .market-split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .market-pane {
+            background-color: var(--bg-card);
+            border: 1px solid #1c1c24;
+            border-radius: 16px;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s var(--glow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 400px;
+        }
+
+        .market-pane::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+        }
+
+        .pane-new::before { background-color: var(--primary); }
+        .pane-tokunbo::before { background-color: var(--tokunbo-blue); }
+
+        .market-pane:hover {
+            transform: translateY(-8px);
+            border-color: #2e2e3d;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+        }
+
+        .pane-tag {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .pane-new .pane-tag { color: var(--primary); }
+        .pane-tokunbo .pane-tag { color: var(--tokunbo-blue); }
+
+        .market-pane h3 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .market-pane p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 30px;
+            max-width: 450px;
+        }
+
+        .pane-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .pane-features li {
+            font-size: 14px;
+            color: #d1d1d6;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pane-features li::before {
+            content: '✓';
+            font-weight: bold;
+        }
+        .pane-new li::before { color: var(--primary); }
+        .pane-tokunbo li::before { color: var(--tokunbo-blue); }
+
+        /* --- WHATSAPP FUNNEL BANNER --- */
+        .cta-banner {
+            padding: 10px 0 100px 0;
+        }
+
+        .banner-box {
+            background: linear-gradient(135deg, #152019 0%, var(--bg-card) 100%);
+            border: 1px solid rgba(37, 211, 102, 0.2);
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .banner-box h2 {
+            font-size: 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .banner-box p {
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto 32px auto;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: white;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebd58;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- RESPONSIVE LAYOUT & MOBILE BREAKPOINTS --- */
+        @media (max-width: 968px) {
+            /* Mobile Navbar Toggle */
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                max-width: 320px;
+                height: 100vh;
+                background-color: #0d0d11;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 24px;
+                padding: 40px;
+                border-left: 1px solid #1c1c24;
+                transition: right 0.4s var(--glow);
+                z-index: 1000;
+            }
+
+            /* Active class to slide out menu via JS */
+            nav.mobile-active {
+                right: 0;
+            }
+
+            nav a {
+                font-size: 18px;
+                width: 100%;
+                padding: 8px 0;
+            }
+
+            .nav-cta {
+                text-align: center;
+                margin-top: 16px;
+            }
+
+            /* Hamburger animation transforms when open */
+            .menu-toggle.open span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+            .menu-toggle.open span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle.open span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -7px);
+            }
+
+            /* Main Grid adjustments */
+            .market-split-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            /* Typography downscaling for smaller screens */
+            .hero h1 { font-size: 38px; }
+            .hero p { font-size: 16px; margin-bottom: 30px; }
+            .section-header h2 { font-size: 30px; }
+            .banner-box h2 { font-size: 28px; }
+            
+            .market-pane { padding: 32px; min-height: auto; }
+            .banner-box { padding: 40px 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 32px; }
+            .hero-btn-group .btn {
+                width: 100%;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .market-pane h3 { font-size: 26px; }
+            .banner-box h2 { font-size: 24px; }
+        }
+
+        footer a:hover {
+    color: var(--primary) !important;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">Vic <span>Autos</span></div>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menuBtn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="navMenu">
+                <a href="index.html" class="active">Home</a>
+                <a href="market.html">The Markets</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://wa.me/2349165733654" class="nav-cta" target="_blank">Chat Workshop</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Showcase Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">⚡ Premier Automotive Sourcing</div>
+                <h1>Upgrade Your Drive. <span>Secure OEM Quality.</span></h1>
+                <p>Welcome to Vic Autos. We bridge the gap between world-class brand new performance upgrades and premium, rigorously-tested Tokunbo auto parts for your specific vehicle configuration.</p>
+                <div class="hero-btn-group">
+                    <a href="#markets" class="btn btn-primary">Explore Inventory</a>
+                    <a href="https://wa.me/2349165733654 text=Hello%20Vic%20Autos,%20I%20need%20a%20part%20for%20my%20vehicle." class="btn btn-secondary" target="_blank">Consult a Specialist</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Dual Market Showcase -->
+    <section class="markets" id="markets">
+        <div class="container">
+            <div class="section-header">
+                <h2>Two Markets. <span>One Elite Standard.</span></h2>
+                <p>Whether you want custom aesthetics and speed, or flawless direct-import structural replacements, select your lane below.</p>
+            </div>
+
+            <div class="market-split-grid">
+                
+                <!-- Pane 1: The New Market -->
+                <div class="market-pane pane-new">
+                    <div>
+                        <span class="pane-tag">✨ High Performance</span>
+                        <h3>The New Market</h3>
+                        <p>Aggressive body conversions, crisp valvetronic exhaust acoustics, structural lowering kits, and pure carbon modifications to redefine your vehicle presence.</p>
+                        <ul class="pane-features pane-new">
+                            <li>Flawless, box-fresh pristine condition</li>
+                            <li>Premium international tuner brands</li>
+                            <li>Direct fitment guarantees for premium trims</li>
+                        </ul>
+                    </div>
+                    <a href="market.html" class="btn btn-secondary" style="width: 100%;">Enter New Market →</a>
+                </div>
+
+                <!-- Pane 2: The Tokunbo Market -->
+                <div class="market-pane pane-tokunbo">
+                    <div>
+                        <span class="pane-tag">📦 Foreign Used Genuine</span>
+                        <h3>The Tokunbo Market</h3>
+                        <p>Direct-import, Lagos-cleared low-mileage mechanical blocks. Get clean, un-tampered foreign used engines, gearboxes, system computers, and original structural panels.</p>
+                        <ul class="pane-features pane-tokunbo">
+                            <li>100% authentic factory parts</li>
+                            <li>Compression and structural integrity tested</li>
+                            <li>Cost-effective reliability for daily commuters</li>
+                        </ul>
+                    </div>
+                    <a href="market.html" class="btn btn-secondary" style="width: 100%;">Enter Tokunbo Market →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified WhatsApp CTA Funnel -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="banner-box">
+                <h2>Lock in Your Custom Deal</h2>
+                <p>Don't guess on part variations or let a rigid pricing table hold you back. Send your year, make, model, and part configuration straight to our desk for transparent negotiations.</p>
+                <a href="https://wa.me/2349165733654" class="btn btn-whatsapp" target="_blank">
+                    🟢 Start WhatsApp Price Negotiation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tiny JavaScript for Mobile Menu Interactions -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('open');
+            navMenu.classList.toggle('mobile-active');
+        });
+
+        // Close menu dynamically when a user clicks a link inside it
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('open');
+                navMenu.classList.remove('mobile-active');
+            });
+        });
+    </script>
+
+
+<footer style="background-color: #0b0b0f; border-top: 1px solid #1c1c24; padding: 60px 0 30px 0; margin-top: 80px;">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+        
+        <div>
+            <div class="logo" style="margin-bottom: 20px; font-size: 20px;">Vic <span>Autos</span></div>
+            <p style="color: var(--text-muted); font-size: 14px; max-width: 300px;">
+                Precision engineering and premium parts sourcing. Bridging the gap between performance upgrades and reliable Tokunbo solutions.
+            </p>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom: 20px; text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Navigation</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+                <li><a href="index.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">Home</a></li>
+                <li><a href="market.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">The Markets</a></li>
+                <li><a href="about.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">About Us</a></li>
+                <li><a href="contact.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+    <h4 style="margin-bottom: 20px; text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Connect</h4>
+    <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+        <a href="https://instagram.com/YOUR_HANDLE" style="color: var(--text-muted); font-size: 20px; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/YOUR_HANDLE" style="color: var(--text-muted); font-size: 20px; transition: 0.3s;"><i class="fab fa-twitter"></i></a>
+        <a href="https://facebook.com/YOUR_HANDLE" style="color: var(--text-muted); font-size: 20px; transition: 0.3s;"><i class="fab fa-facebook"></i></a>
+    </div>
+    <a href="https://wa.me/2349165733654" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 700; font-size: 14px;">Chat on WhatsApp</a>
+</div>
+    </div>
+
+    <div class="container" style="border-top: 1px solid #1c1c24; margin-top: 40px; padding-top: 20px; text-align: center;">
+        <p style="color: #4a4a50; font-size: 12px;">&copy; 2026 Vic Autos. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

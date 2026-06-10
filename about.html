@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Vic Autos | Precision Engineering</title>
+    <style>
+        :root {
+            --primary: #ff2a2a;
+            --primary-hover: #cc1f1f;
+            --bg-deep: #08080a;
+            --bg-card: #121216;
+            --bg-nav: rgba(13, 13, 17, 0.95);
+            --text-pure: #ffffff;
+            --text-muted: #9fa0a6;
+            --glow: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        body { background-color: var(--bg-deep); color: var(--text-pure); padding-top: 80px; line-height: 1.6; }
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+        /* --- NAVIGATION (Unified) --- */
+        header { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--bg-nav); backdrop-filter: blur(12px); border-bottom: 1px solid #1c1c24; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-size: 26px; font-weight: 900; text-transform: uppercase; cursor: pointer; z-index: 1001; }
+        .logo span { color: var(--primary); }
+        nav { display: flex; align-items: center; gap: 32px; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 15px; font-weight: 600; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: var(--text-pure); }
+        .nav-cta { background-color: var(--primary); color: white !important; padding: 10px 20px; border-radius: 6px; font-weight: 700; transition: 0.3s; }
+        .nav-cta:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
+
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; z-index: 1001; padding: 8px; }
+        .menu-toggle span { display: block; width: 28px; height: 3px; background-color: white; transition: 0.3s; }
+
+        /* --- CONTENT --- */
+        .about-hero { padding: 100px 0; text-align: center; }
+        .about-hero h1 { font-size: 48px; text-transform: uppercase; margin-bottom: 20px; }
+        .about-hero p { max-width: 700px; margin: 0 auto; color: var(--text-muted); font-size: 18px; }
+
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 60px 0; }
+        .feat-card { background: var(--bg-card); padding: 40px; border-radius: 16px; border: 1px solid #1c1c24; transition: 0.3s; }
+        .feat-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .feat-card h3 { color: var(--primary); margin-bottom: 12px; }
+
+        /* --- NEW ADDED SECTIONS --- */
+        .stats-bar { display: flex; justify-content: space-around; padding: 40px 0; border-top: 1px solid #1c1c24; border-bottom: 1px solid #1c1c24; margin-bottom: 60px; }
+        .stat-item { text-align: center; }
+        .stat-item h4 { font-size: 32px; color: var(--primary); }
+        .stat-item p { color: var(--text-muted); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+
+        .promise-block { background: var(--bg-card); padding: 50px; border-radius: 16px; text-align: center; margin-bottom: 60px; border: 1px solid #1c1c24; }
+        .promise-block h2 { margin-bottom: 15px; color: var(--text-pure); }
+
+        .story-section { padding: 80px 0; border-top: 1px solid #1c1c24; }
+        .story-section h2 { font-size: 32px; margin-bottom: 20px; }
+        .story-section p { color: var(--text-muted); max-width: 800px; }
+
+        /* --- MOBILE RESPONSIVE (Unified) --- */
+        @media (max-width: 968px) {
+            .menu-toggle { display: flex; }
+            nav { position: fixed; top: 0; right: -100%; width: 75%; max-width: 320px; height: 100vh; background-color: #0d0d11; flex-direction: column; justify-content: center; align-items: flex-start; gap: 24px; padding: 40px; border-left: 1px solid #1c1c24; transition: right 0.4s var(--glow); z-index: 1000; }
+            nav.mobile-active { right: 0; }
+            nav a { font-size: 18px; width: 100%; padding: 8px 0; }
+            .menu-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+            .menu-toggle.open span:nth-child(2) { opacity: 0; }
+            .menu-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -7px); }
+            .stats-bar { flex-direction: column; gap: 30px; }
+        }
+
+        footer a:hover { color: var(--primary) !important; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo" onclick="window.location.href='index.html'">Vic <span>Autos</span></div>
+            <button class="menu-toggle" id="menuBtn"><span></span><span></span><span></span></button>
+            <nav id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="market.html">The Markets</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://wa.me/2349165733654" class="nav-cta" target="_blank">Chat Workshop</a>
+            </nav>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>Precision Driven.</h1>
+            <p>At Vic Autos, we don't just fix cars; we bridge the gap between world-class performance upgrades and genuine, high-integrity parts.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <div class="stats-bar">
+            <div class="stat-item"><h4>500+</h4><p>Parts Sourced</p></div>
+            <div class="stat-item"><h4>100%</h4><p>Quality Verified</p></div>
+            <div class="stat-item"><h4>24/7</h4><p>Expert Support</p></div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feat-card">
+                <h3>Technical Integrity</h3>
+                <p>We leverage modern diagnostic tools and a deep understanding of automotive mechanics to ensure your car performs exactly as intended.</p>
+            </div>
+            <div class="feat-card">
+                <h3>Transparent Sourcing</h3>
+                <p>Full visibility into every part, whether New Market or vetted Tokunbo components. We provide the facts so you can make informed decisions.</p>
+            </div>
+            <div class="feat-card">
+                <h3>Performance First</h3>
+                <p>Ensuring your vehicle operates at peak efficiency every time you turn the key is our standard operating procedure.</p>
+            </div>
+        </div>
+
+        <div class="promise-block">
+            <h2>Our Quality Promise</h2>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">We don't believe in second-best. Every part that passes through Vic Autos is vetted to ensure it meets factory-grade reliability standards, giving you peace of mind on every journey.</p>
+        </div>
+
+        <section class="story-section">
+            <h2>Our Workshop Philosophy</h2>
+            <p>Vic Autos was built on a simple premise: vehicle owners deserve honesty and high-level craftsmanship. We recognized a gap in the market where quick-fixes were becoming the standard, and we decided to push back by providing professional, reliable service for every make and model we encounter.</p>
+        </section>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('open');
+            navMenu.classList.toggle('mobile-active');
+        });
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('open');
+                navMenu.classList.remove('mobile-active');
+            });
+        });
+    </script>
+
+    <footer style="background-color: #0b0b0f; border-top: 1px solid #1c1c24; padding: 60px 0 30px 0; margin-top: 80px;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+            <div>
+                <div class="logo" style="margin-bottom: 20px; font-size: 20px;">Vic <span>Autos</span></div>
+                <p style="color: var(--text-muted); font-size: 14px; max-width: 300px;">
+                    Precision engineering and premium parts sourcing. Bridging the gap between performance upgrades and reliable Tokunbo solutions.
+                </p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px; text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Navigation</h4>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+                    <li><a href="index.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">Home</a></li>
+                    <li><a href="market.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">The Markets</a></li>
+                    <li><a href="about.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">About Us</a></li>
+                    <li><a href="contact.html" style="color: var(--text-muted); text-decoration: none; font-size: 14px;">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px; text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Connect</h4>
+                <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                    <a href="#" style="color: var(--text-muted); font-size: 20px; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: var(--text-muted); font-size: 20px; transition: 0.3s;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" style="color: var(--text-muted); font-size: 20px; transition: 0.3s;"><i class="fab fa-facebook"></i></a>
+                </div>
+                <a href="https://wa.me/2349165733654" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 700; font-size: 14px;">Chat on WhatsApp</a>
+            </div>
+        </div>
+        <div class="container" style="border-top: 1px solid #1c1c24; margin-top: 40px; padding-top: 20px; text-align: center;">
+            <p style="color: #4a4a50; font-size: 12px;">&copy; 2026 Vic Autos. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
