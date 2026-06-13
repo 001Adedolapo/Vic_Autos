@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vic Autos | Part & Upgrade Marketplace</title>
+    <meta name="viewport" content="width=deVCe-width, initial-scale=1.0">
+    <title>VC Autos | Part & Upgrade Marketplace</title>
     <style>
         /* Base & Design Tokens matching Home Page */
         :root {
@@ -15,7 +15,7 @@
             --text-pure: #ffffff;
             --text-muted: #9fa0a6;
             --whatsapp: #25d366;
-            --tokunbo-blue: #0076ff;
+            --Foreign-blue: #0076ff;
             --glow: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -232,7 +232,7 @@
         }
 
         .badge-new { background-color: var(--primary); color: white; }
-        .badge-tokunbo { background-color: var(--tokunbo-blue); color: white; }
+        .badge-Foreign { background-color: var(--Foreign-blue); color: white; }
 
         .product-details {
             padding: 24px;
@@ -299,7 +299,7 @@
             background-color: #1ebd58;
         }
 
-        /* --- THE SPECIALIST SERVICE BOX --- */
+        /* --- THE SPECIALIST SERVCE BOX --- */
         .specialist-prompt-box {
             background: linear-gradient(135deg, #121216 0%, #0d0d11 100%);
             border: 1px solid #1c1c24;
@@ -447,7 +447,7 @@ footer a:hover {
     <!-- Header / Navigation -->
     <header>
         <div class="container nav-flex">
-            <div class="logo" onclick="window.location.href='index.html'">Vic <span>Autos</span></div>
+            <div class="logo" onclick="window.location.href='index.html'">VC <span>Autos</span></div>
             
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">            
             <!-- Mobile Menu Toggle Button -->
@@ -467,6 +467,28 @@ footer a:hover {
         </div>
     </header>
 
+    <button id="backToTop" style="display: none; position: fixed; bottom: 30px; right: 30px; padding: 15px 20px; font-size: 20px; background-color: #ff0000; color: white; border: none; border-radius: 50%; cursor: pointer; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+  &uarr;
+</button>
+
+<script>
+  const topBtn = document.getElementById("backToTop");
+
+  // Show button when user scrolls down 300px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to top when clicked
+  topBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+
     <!-- Marketplace Main Title -->
     <section class="page-title-section">
         <div class="container">
@@ -481,7 +503,7 @@ footer a:hover {
         <div class="filter-container">
             <button class="filter-btn active" onclick="applyMarketFilter('all')">All Inventory</button>
             <button class="filter-btn" onclick="applyMarketFilter('new')">✨ New Market</button>
-            <button class="filter-btn" onclick="applyMarketFilter('tokunbo')">📦 Tokunbo Market</button>
+            <button class="filter-btn" onclick="applyMarketFilter('Foreign')">📦 Foreign Used Market</button>
         </div>
 
         <!-- Inventory Goods Grid -->
@@ -489,13 +511,13 @@ footer a:hover {
     
     <div class="product-card item-node new">
         <div class="product-img-box">
-            <img src="venz.jpg" alt="Valvetronic Muffler">
+            <img src="New.jpeg" alt="Valvetronic Muffler">
             <span class="market-badge badge-new">New Market</span>
         </div>
         <div class="product-details">
-            <div class="product-compat">Mercedes Benz / BMW / Audi</div>
-            <div class="product-title">Valvetronic Muffler Kits</div>
-            <p class="product-desc">Premium stainless steel dual-tone exhaust kits.</p>
+            <div class="product-compat">TOYOTA</div>
+            <div class="product-title">TOYOTA FRONT GRILLE</div>
+            <p class="product-desc">Premium OEM-style black honeycomb finish.</p>
             <div class="product-footer">
                 <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
                 <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
@@ -503,15 +525,128 @@ footer a:hover {
         </div>
     </div>
 
-    <div class="product-card item-node tokunbo">
+  
+    <div class="product-card item-node new">
         <div class="product-img-box">
-            <img src="engine-url.jpg" alt="2AZ-FE Engine">
-            <span class="market-badge badge-tokunbo">Tokunbo</span>
+            <img src="New2.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
         </div>
         <div class="product-details">
-            <div class="product-compat">Toyota Camry / Highlander</div>
-            <div class="product-title">2AZ-FE Foreign Used Engine</div>
-            <p class="product-desc">Direct-import un-tampered block assemblies.</p>
+            <div class="product-compat">LEXUS</div>
+        <div class="product-title">LEXUS SPINDLE GRILLE</div>
+        <p class="product-desc">High-gloss finish, perfect fitment for luxury models.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New3.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">LEXUS</div>
+        <div class="product-title">LEXUS FRONT BUMPER</div>
+        <p class="product-desc">Precision molded replacement bumper assembly.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New4.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">LEXUS</div>
+        <div class="product-title">LEXUS EXTERIOR TRIM</div>
+        <p class="product-desc">Genuine factory finish trim pieces.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New5.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">MERCEDES / BMW</div>
+        <div class="product-title">LED TAIL LIGHT ASSEMBLY</div>
+        <p class="product-desc">High-intensity LED clusters for modern styling.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New6.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">PREMIUM STEERING WHEEL</div>
+        <p class="product-desc">Ergonomic design with multifunction controls.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu1.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">ACURA</div>
+        <div class="product-title">ACURA FRONT GRILLE</div>
+        <p class="product-desc">Foreign used, original trim finish.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New9.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">LEXUS</div>
+        <div class="product-title">SPINDLE FRONT GRILLE</div>
+        <p class="product-desc">Aggressive sport-style mesh design.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu2.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">HONDA</div>
+        <div class="product-title">HONDA FRONT GRILLE</div>
+        <p class="product-desc">Foreign used, pristine condition.</p>
             <div class="product-footer">
                 <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
                 <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
@@ -521,13 +656,13 @@ footer a:hover {
 
     <div class="product-card item-node new">
         <div class="product-img-box">
-            <img src="spoiler-url.jpg" alt="Carbon Fiber Aero">
+            <img src="New10.jpeg" alt="Valvetronic Muffler">
             <span class="market-badge badge-new">New Market</span>
         </div>
         <div class="product-details">
-            <div class="product-compat">Universal Performance Trim</div>
-            <div class="product-title">Carbon Fiber Aero Kits</div>
-            <p class="product-desc">Ultra-light structural body modification.</p>
+            <div class="product-compat">TOYOTA / LEXUS</div>
+        <div class="product-title">TAIL LIGHT COMPLETE SET</div>
+        <p class="product-desc">Full quad-piece set, scratch-resistant lens.</p>
             <div class="product-footer">
                 <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
                 <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
@@ -535,21 +670,664 @@ footer a:hover {
         </div>
     </div>
 
-    <div class="product-card item-node tokunbo">
+     <div class="product-card item-node Foreign">
         <div class="product-img-box">
-            <img src="gearbox-url.jpg" alt="Automatic Gearbox">
-            <span class="market-badge badge-tokunbo">Tokunbo</span>
+            <img src="fu3.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
         </div>
         <div class="product-details">
-            <div class="product-compat">Honda Accord / CR-V</div>
-            <div class="product-title">Automatic Gearbox Blocks</div>
-            <p class="product-desc">Foreign used smooth-shifting modules.</p>
+            <div class="product-compat">HONDA / ACURA</div>
+        <div class="product-title">REPLACEMENT HOOD</div>
+        <p class="product-desc">Foreign used, straight paneling.</p>
             <div class="product-footer">
-                <div class="price-estimate">Flexible Range <span>Negotiable Options</span></div>
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
                 <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
             </div>
         </div>
     </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New11.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">MERCEDES / BMW</div>
+        <div class="product-title">PREMIUM HEADLIGHT SET</div>
+        <p class="product-desc">Crystal clear lens with high-output projector optics.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu4.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">HONDA / ACURA</div>
+        <div class="product-title">REAR BUMPER</div>
+        <p class="product-desc">Foreign used bumper assembly.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New12.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">BMW / AUDI</div>
+        <div class="product-title">SPORT SIDE SKIRT KITS</div>
+        <p class="product-desc">Aerodynamic side moldings for a lower stance.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu5.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">HONDA / ACURA</div>
+        <div class="product-title">SIDE BODY TRIM</div>
+        <p class="product-desc">Foreign used, intact clips.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New13.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">TOYOTA / LEXUS</div>
+        <div class="product-title">FRONT BUMPER LIP</div>
+        <p class="product-desc">Durable, impact-resistant matte black splitter.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu6.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">HONDA / ACURA</div>
+        <div class="product-title">LOWER VALANCE TRIM</div>
+        <p class="product-desc">Foreign used, structural trim piece.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New14.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">MERCEDES BENZ</div>
+        <div class="product-title">BODY TRIM PANEL</div>
+        <p class="product-desc">OEM replacement panel with perfect factory fit.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+    
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu7.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">LEXUS</div>
+        <div class="product-title">LEXUS SPINDLE GRILLE</div>
+        <p class="product-desc">Genuine Lexus spindle front grille assembly.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New15.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">LEXUS</div>
+        <div class="product-title">EXTERIOR TRIM PIECE</div>
+        <p class="product-desc">Precision-engineered gloss trim for clean aesthetics.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu8.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">ACURA</div>
+        <div class="product-title">ACURA FRONT GRILLE</div>
+        <p class="product-desc">Direct-import Acura radiator grille.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New16.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">BMW / MERCEDES</div>
+        <div class="product-title">DOOR MOLDING SET</div>
+        <p class="product-desc">Complete set of protective door moldings.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu9.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">VARIOUS</div>
+        <div class="product-title">VEHICLE DOOR PANEL</div>
+        <p class="product-desc">High-quality foreign used door shell.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New17.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">LEXUS</div>
+        <div class="product-title">FRONT BUMPER & LIGHT KIT</div>
+        <p class="product-desc">Complete front-end visual refresh kit.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu10.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">HONDA</div>
+        <div class="product-title">HONDA FIT TAILGATE</div>
+        <p class="product-desc">Complete trunk/tailgate assembly.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New18.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">TOYOTA GRILLE ASSEMBLY</div>
+        <p class="product-desc">Heavy-duty OEM replacement grille.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu11.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">HONDA</div>
+        <div class="product-title">HONDA FRONT GRILLE</div>
+        <p class="product-desc">Clean, original Honda radiator grille.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu12.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">TOYOTA FRONT BUMPER</div>
+        <p class="product-desc">Foreign used bumper with mounting points.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New19.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">MERCEDES / BMW</div>
+        <div class="product-title">LED HEADLIGHT UNITS</div>
+        <p class="product-desc">High-performance custom projector housing.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New20.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">TOYOTA</div>
+        <div class="product-title">TAIL LIGHT PAIR</div>
+        <p class="product-desc">Clear lens, vibrant LED brake light upgrade.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+     <div class="product-card item-node Foreign">
+        <div class="product-img-box">
+            <img src="fu13.jpeg" alt="2AZ-FE Engine">
+            <span class="market-badge badge-Foreign">Foreign Used</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">HONDA</div>
+        <div class="product-title">PREMIUM STEERING WHEEL</div>
+        <p class="product-desc">Direct-import Honda steering wheel assembly with controls.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Flexible Range <span>Based on Trim Year</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New21.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">TOYOTA STEERING WHEEL</div>
+        <p class="product-desc">Leather-stitched grip with control buttons.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New22.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">LEXUS</div>
+        <div class="product-title">LEXUS STEERING WHEEL</div>
+        <p class="product-desc">Luxury finish with wood and leather accents.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New23.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">TOYOTA</div>
+        <div class="product-title">SPORTS STEERING WHEEL</div>
+        <p class="product-desc">Carbon fiber trim with perforated leather grip.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New24.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">EXECUTIVE STEERING WHEEL</div>
+        <p class="product-desc">Standard OEM replacement, classic finish.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New25.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">PREMIUM LEATHER WHEEL</div>
+        <p class="product-desc">Enhanced grip, high-quality stitched leather.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New26.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+          <div class="product-compat">TOYOTA</div>
+        <div class="product-title">OEM REPLACEMENT WHEEL</div>
+        <p class="product-desc">Original factory specification steering unit.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New27.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">LEXUS</div>
+        <div class="product-title">LUXURY PERFORATED WHEEL</div>
+        <p class="product-desc">Premium perforated leather, refined Lexus feel.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New28.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">RED-STITCH SPORTS WHEEL</div>
+        <p class="product-desc">Racing aesthetic, vibrant contrast stitching.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New29.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">LEXUS</div>
+        <div class="product-title">LEATHER STEERING WHEEL</div>
+        <p class="product-desc">Ergonomic grip with luxury leather finish.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New30.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">TOYOTA</div>
+        <div class="product-title">SPORT STEERING UNIT</div>
+        <p class="product-desc">Enhanced control and racing-inspired design.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New31.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">GR SPORT STEERING</div>
+        <p class="product-desc">Genuine Gazoo Racing performance wheel.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New32.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">TOYOTA</div>
+        <div class="product-title">EXECUTIVE STEERING WHEEL</div>
+        <p class="product-desc">Premium interior upgrade with full controls.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New33.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">TOYOTA</div>
+        <div class="product-title">MULTI-FUNCTION STEERING</div>
+        <p class="product-desc">Integrated control buttons for multimedia.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New34.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">CARBON FIBER WHEEL</div>
+        <p class="product-desc">Premium carbon fiber finish for a custom look.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New35.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">PREMIUM STEERING WHEEL</div>
+        <p class="product-desc">Perforated leather with custom stitching.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New36.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+           <div class="product-compat">LEXUS</div>
+        <div class="product-title">EXECUTIVE STEERING WHEEL</div>
+        <p class="product-desc">Luxury wood/leather finish with full controls.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New37.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">LEXUS</div>
+        <div class="product-title">FRONT BUMPER & GRILLE ASSEMBLY</div>
+        <p class="product-desc">Complete front-end replacement with factory finish.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New38.jpeg" alt="Valvetronic Muffler">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">UNIVERSAL PERFORMANCE</div>
+        <div class="product-title">CARBON FIBER AERO KITS</div>
+        <p class="product-desc">Ultra-light structural body modification.</p>modules.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New39.jpeg" alt="Carbon Fiber Aero">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">RAV4 2014 BONNET</div>
+        <p class="product-desc">High-quality replacement hood assembly.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+<div class="product-card item-node new">
+        <div class="product-img-box">
+            <img src="New40.jpeg" alt="Carbon Fiber Aero">
+            <span class="market-badge badge-new">New Market</span>
+        </div>
+        <div class="product-details">
+            <div class="product-compat">TOYOTA</div>
+        <div class="product-title">VENZA 2020 BONNET</div>
+        <p class="product-desc">Genuine factory-fit bonnet assembly.</p>
+            <div class="product-footer">
+                <div class="price-estimate">Est. Quote <span>Haggle on WhatsApp</span></div>
+                <a href="https://wa.me/2349165733654" class="btn-negotiate">Negotiate</a>
+            </div>
+        </div>
+    </div>
+
+    
 </div>
 
         <!-- Helpful Assistant Row for Unknown Parts -->
@@ -606,14 +1384,15 @@ footer a:hover {
         });
     </script>
 
+
     
 <footer style="background-color: #0b0b0f; border-top: 1px solid #1c1c24; padding: 60px 0 30px 0; margin-top: 80px;">
     <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
         
         <div>
-            <div class="logo" style="margin-bottom: 20px; font-size: 20px;">Vic <span>Autos</span></div>
+            <div class="logo" style="margin-bottom: 20px; font-size: 20px;">VC <span>Autos</span></div>
             <p style="color: var(--text-muted); font-size: 14px; max-width: 300px;">
-                Precision engineering and premium parts sourcing. Bridging the gap between performance upgrades and reliable Tokunbo solutions.
+                Precision engineering and premium parts sourcing. Bridging the gap between performance upgrades and reliable Foreign solutions.
             </p>
         </div>
 
@@ -639,7 +1418,7 @@ footer a:hover {
     </div>
 
     <div class="container" style="border-top: 1px solid #1c1c24; margin-top: 40px; padding-top: 20px; text-align: center;">
-        <p style="color: #4a4a50; font-size: 12px;">&copy; 2026 Vic Autos. All rights reserved.</p>
+        <p style="color: #4a4a50; font-size: 12px;">&copy; 2026 VC Autos. All rights reserved.</p>
     </div>
 </footer>
 </body>
